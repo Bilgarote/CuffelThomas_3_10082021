@@ -1,0 +1,21 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "mobile site that lists the menus of gourmet restaurants",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch .sass/main.scss:.public/css/style.css -w --style expanded",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bilgarote/CuffelThomas_3_10082021.git"
+  },
+  "author": "Cuffel Thomas",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/Bilgarote/CuffelThomas_3_10082021/issues"
+  },
+  "homepage": "https://github.com/Bilgarote/CuffelThomas_3_10082021#readme"
+}
