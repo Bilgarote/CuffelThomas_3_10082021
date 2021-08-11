@@ -29,6 +29,20 @@ li {
   list-style: none;
 }
 
+.btn {
+  color: white;
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  cursor: pointer;
+  border: none;
+  width: 60%;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 1.1rem 0.5rem 1.1rem 0.5rem;
+  margin: 1.5rem;
+  box-shadow: 0px 3px 10px 0px #9c9c9c;
+  border-radius: 42px;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -36,6 +50,35 @@ li {
 }
 .header img {
   margin: auto;
+}
+
+.explorer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.explorer__area {
+  background-color: #e7e7e7e8;
+  box-shadow: 5px 5px 5px -8px inset;
+  width: 100%;
+  padding: 0.7rem;
+  text-align: center;
+}
+.explorer__area span {
+  padding: 5px;
+}
+.explorer__tittle {
+  width: 65%;
+  padding: 2rem 0 0 0.5rem;
+  text-align: center;
+}
+.explorer__slogan {
+  width: 75%;
+  padding: 0.5rem;
+  font-weight: 300;
+  text-align: center;
 }
 
 .footer {
