@@ -1,9 +1,9 @@
+/* layout explorer */
+
 .explorer{
     display:flex;
     flex-direction: column;
     align-items: center;
-    align-content: center;
-    justify-content: center;
     margin-bottom: 5rem;
     &__area{
         background-color: #e7e7e7e8;
@@ -29,16 +29,27 @@
 
 }
 
-.gris{
-    color: grey;
+/* modification class */
+.grey{
+    color: $color-grey;
 }
 
-.rose{
+.pink{
     color: $colour-primary;
 }
 
-#steps_area{
-    margin: 1.5rem;
+.background_pink{
+    background: pastel($colour-secondary);
+}
+
+#center{
+    object-position: center 60%;
+}
+
+
+/* layout step are */
+.steps_area{
+    margin: 1.5rem 1.5rem 5rem 1.5rem;
 }
 
 .steps{
@@ -50,7 +61,7 @@
     &__number{
         background-color: $colour-primary;
         border-radius: 100%;
-        color: white;
+        color: $colour-white;
         padding: 4px 9px 4px 9px;
         margin-left: -2.2rem;
     }
@@ -65,5 +76,33 @@
             text-align: center;
             margin: 0 15px 0 15px;
         }        
+    }
+}
+
+.restaurant{
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 1.5rem 4rem 1.5rem;
+    article{
+        display: flex;
+        height: 200px;
+        border-radius: 25px;
+        margin: 2rem 1rem 0 0;
+        background-color: $colour-white;
+        box-shadow: 0 0px 15px silver;
+        flex-direction: column;
+        img {
+            border-radius: 25px 25px 0 0;
+            object-fit: cover;
+            object-position: bottom;
+            width: 100%;
+            height: 140px;
+        }
+        h4{
+            padding: 0.3rem 0 0 0.5rem;
+        }
+        p{
+            padding: 0.3rem 0 0 0.5rem;
+        }
     }
 }
