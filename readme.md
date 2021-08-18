@@ -86,3 +86,36 @@ Cela fait apparaître une petite coche à droite du plat. Cette coche devra coul
 la droite vers la gauche. Pour cette première version, l’effet peut apparaître au survol 
 sur desktop au lieu du clic. Si l’intitulé du plat est trop long, il devra être rogné avec 
 des points de suspension. Un exemple de l’effet attendu est fourni. 
+
+__Installation SASS__
+-----------------
+
+Pour installer Sass, vous allez avoir besoin d’installer NodeJS. 
+
+### 1. Installez NodeJS sur votre ordinateur
+
+Rendez-vous sur la page d’installation de NodeJS et téléchargez la LTS
+
+Une fois l’installation terminée, je vous invite à lancer l’invite de commandes windows :
+  
+  Entrez la commande: `node -v` puis la commande `npm -v`
+
+> Ces deux commandes vous permettront de vérifier si :
+> Node et Npm est bien installé et de connaitre sa version.
+
+### 2. Vous pouvez maintenant installer Sass 
+
+Avec la commande  `npm -g install sass` 
+
+Pour vérifier que vous avez bien installé Sass dans votre système, tapez " `sass --version` " dans le terminal.
+
+### 3. Vous avez installé Sass, maintenant comment est-ce qu’on le fait fonctionner ?
+
+Grâce au ficher package.json crée au préalable pour ce projet, vous pouvez voir dans le fichier un script :
+  > "sass": "sass --watch sass/main.scss:public/css/style.css -w --style expanded"
+
+Dans le terminal, tapez  `npm run sass` 
+
+Ça y est, vous êtes fin prêt !
+Tant que vous n’interrompez pas le processus, soit en tapant Ctrl+C dans le terminal, soit en cliquant sur la corbeille,
+le script attendra et sera à l'affût de tout changement à compiler.
