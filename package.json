@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "mobile site that lists the menus of gourmet restaurants",
   "main": "index.js",
-  "scripts": {
+      "scripts": {
     "sass": "sass --watch sass/main.scss:public/css/style.css -w --style expanded",
-    "prefix": "postcss public/css/style.css --use autoprefixer -d public/css/prefixed/"
+    "prefix": "postcss public/css/style.css --use autoprefixer -d public/css/prefixed/",
+    "lint": "scss-lint"
   },
   "repository": {
     "type": "git",

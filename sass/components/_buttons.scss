@@ -1,14 +1,17 @@
 .btn {
+    background: linear-gradient(to bottom, $colour-secondary , $colour-primary);
+    border: 0;
+    border-radius: 42px;
+    box-shadow: 0 3px 10px 0 $color-grey;
     color: $colour-white;
-    background:linear-gradient(to bottom, $colour-secondary , $colour-primary );
     cursor: pointer;
-    border: none;
-    width: 60%;
-    font-weight: bold;
     font-size: 1rem;
-    padding: 1.1rem 0.5rem 1.1rem 0.5rem;
+    font-weight: bold;
     margin: 1.5rem;
-    box-shadow: 0px 3px 10px 0px #9c9c9c;
-    border-radius:42px;
-}
+    padding: 1.1rem .5rem;
+    width: 60%;
 
+    @include responsive(desktop) {
+        width: 250px;
+    }
+}
