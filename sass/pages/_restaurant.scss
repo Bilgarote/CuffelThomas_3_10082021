@@ -1,1 +1,98 @@
+main{
 
+    @include responsive(desktop){
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 110%;
+        justify-content: center;
+    }
+}
+
+header {
+
+    a {
+        color: $colour-backbtn;
+        font-size: 1.7rem;
+        margin-left: 25px;
+        position: absolute;
+    }
+}
+
+.tittle {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    img {
+        height: 25rem;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    h2 {
+        background: $colour-white;
+        border-radius: 25px 25px 0 0;
+        font-family: 'Shrikhand', sans-serif;
+        font-size: xx-large;
+        font-weight: 100;
+        margin: -3.5rem 0;
+        padding: 1.5rem 0 2.5rem 1rem;
+
+        @include responsive(desktop) {
+            width: 30%;
+            align-self: center;
+        }
+    }
+}
+
+.menu {
+    padding: .1rem 1rem;
+
+    h3 {
+        border-bottom: 3px solid $colour-tertiary;
+        font-weight: 300;
+        margin-top: 2rem;
+        padding-bottom: 5px;
+        width: 45px;
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    li {
+        background-color: $colour-white;
+        border-radius: 15px;
+        box-shadow: 0 0 15px $color-grey;
+        display: flex;
+        flex-direction: column;
+        margin: 1rem .5rem 0 0;
+        padding: .3rem;
+
+        h4 {
+            margin: .5rem .5rem 0;
+        }
+
+        p {
+            display: flex;
+            font-size: .9rem;
+            justify-content: space-between;
+            margin: .2rem .5rem .5rem;
+        }
+
+        span {
+            font-weight: bold;
+        }
+    }
+}
+
+.layout-btn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+
+    @include responsive(desktop){
+        flex-basis: 100%;
+    }
+}

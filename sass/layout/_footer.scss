@@ -19,6 +19,11 @@
     ul {
         padding-left: .5rem;
 
+        @include responsive(desktop) {
+            display: flex;
+            justify-content: space-around;
+        }
+
         li {
             padding-top: .5rem;
         }
