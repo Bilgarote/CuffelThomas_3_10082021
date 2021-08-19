@@ -6,6 +6,10 @@
     flex-direction: column;
     margin-bottom: 5rem;
 
+    @include responsive(desktop) {
+        flex-basis: 100%;
+    }
+
     &__area {
         background-color: #e7e7e7e8;
         box-shadow: 5px 5px 5px -8px inset;
@@ -90,6 +94,7 @@
     li {
         border-radius: 20px;
         box-shadow: 0 2px 10px -5px;
+        font-size: 90%;
         margin: 1rem;
         padding: 1.1rem;
 
