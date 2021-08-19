@@ -259,8 +259,8 @@ header a {
 }
 @media screen and (min-width: 1024px) {
   .tittle h2 {
-    width: 30%;
     align-self: center;
+    width: 30%;
   }
 }
 

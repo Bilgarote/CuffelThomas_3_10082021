@@ -1,6 +1,6 @@
-main{
+main {
 
-    @include responsive(desktop){
+    @include responsive(desktop) {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -40,8 +40,8 @@ header {
         padding: 1.5rem 0 2.5rem 1rem;
 
         @include responsive(desktop) {
-            width: 30%;
             align-self: center;
+            width: 30%;
         }
     }
 }
@@ -92,7 +92,7 @@ header {
     justify-content: center;
     margin-bottom: 4rem;
 
-    @include responsive(desktop){
+    @include responsive(desktop) {
         flex-basis: 100%;
     }
 }
