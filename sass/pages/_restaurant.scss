@@ -41,13 +41,18 @@ header {
 
         @include responsive(desktop) {
             align-self: center;
-            width: 30%;
+            padding: .5rem 0 2.5rem 2rem;
+            width: 40%;
         }
     }
 }
 
 .menu {
     padding: .1rem 1rem;
+
+    @include responsive(desktop) {
+        width: 30%;
+    }
 
     h3 {
         border-bottom: 3px solid $colour-tertiary;

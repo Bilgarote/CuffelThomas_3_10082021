@@ -260,12 +260,18 @@ header a {
 @media screen and (min-width: 1024px) {
   .tittle h2 {
     align-self: center;
-    width: 30%;
+    padding: .5rem 0 2.5rem 2rem;
+    width: 40%;
   }
 }
 
 .menu {
   padding: .1rem 1rem;
+}
+@media screen and (min-width: 1024px) {
+  .menu {
+    width: 30%;
+  }
 }
 .menu h3 {
   border-bottom: 3px solid #99e2d0;
