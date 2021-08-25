@@ -124,6 +124,7 @@
     }
 
     @include responsive(desktop) {
+        background-color: $colour-white;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -200,6 +201,20 @@
             width: 60%;
         }
     }
+}
+
+.new::after {
+    content: "Nouveau";
+    background-color: #99e2d0;
+    padding: 0.4rem 0.7rem;
+    color: #278870;
+    font-weight: bold;
+    border-radius: 2px;
+    width: 75px;
+    margin-top: -11.8rem;
+    margin-left: auto;
+    margin-right: 15px;
+    text-align: center;
 }
 
 .container {
