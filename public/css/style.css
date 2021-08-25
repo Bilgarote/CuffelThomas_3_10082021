@@ -33,6 +33,10 @@ ul li {
   padding: 1.3rem .5rem;
   width: 225px;
 }
+.btn:hover {
+  opacity: 0.9;
+  box-shadow: 0 3px 10px 0 #000000;
+}
 @media screen and (min-width: 1024px) {
   .btn {
     width: 250px;

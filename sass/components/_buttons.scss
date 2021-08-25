@@ -10,6 +10,10 @@
     margin: 1.5rem;
     padding: 1.3rem .5rem;
     width: 225px;
+    &:hover {
+        opacity: 0.9;
+        box-shadow: 0 3px 10px 0 $color-black;
+    }
 
     @include responsive(desktop) {
         width: 250px;
