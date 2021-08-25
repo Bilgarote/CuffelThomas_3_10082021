@@ -19,36 +19,54 @@ header {
     }
 }
 
+
 .tittle {
     display: flex;
     flex-direction: column;
     width: 100%;
 
+    &__heart {
+        background: $colour-white;
+        border-radius: 25px 25px 0 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: -2rem 0;
+
+        span {
+            align-self: center;
+            flex-basis: 15%;
+
+            @include responsive(desktop) {
+                flex-basis: 0;
+                margin-right: auto;
+                padding-left: 2rem;
+            }
+        }
+
+    }
+
     img {
-        height: 25rem;
+        height: 17.2rem;
         object-fit: cover;
         width: 100%;
     }
 
     h2 {
-        background: $colour-white;
-        border-radius: 25px 25px 0 0;
         font-family: 'Shrikhand', sans-serif;
-        font-size: xx-large;
+        font-size: 1.7rem;
         font-weight: 100;
-        margin: -3.5rem 0;
-        padding: 1.5rem 0 2.5rem 1rem;
+        padding: 0 1rem;
 
         @include responsive(desktop) {
             align-self: center;
-            padding: .5rem 0 2.5rem 2rem;
-            width: 40%;
+            margin-left: auto;
         }
     }
 }
 
 .menu {
-    padding: 4.5rem 1rem;
+    margin: .5rem 1rem;
 
     @include responsive(desktop) {
         width: 30%;
@@ -95,7 +113,7 @@ header {
 .layout-btn {
     display: flex;
     justify-content: center;
-    margin-bottom: 4rem;
+    margin: 2rem 0;
 
     @include responsive(desktop) {
         flex-basis: 100%;

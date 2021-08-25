@@ -6,10 +6,10 @@
     color: $colour-white;
     cursor: pointer;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 500;
     margin: 1.5rem;
-    padding: 1.1rem .5rem;
-    width: 60%;
+    padding: 1.3rem .5rem;
+    width: 225px;
 
     @include responsive(desktop) {
         width: 250px;
