@@ -327,6 +327,18 @@ header a {
 .menu ul {
   padding: 0;
 }
+.menu .delay--1 {
+  animation-delay: 200ms;
+}
+.menu .delay--2 {
+  animation-delay: 400ms;
+}
+.menu .delay--3 {
+  animation-delay: 600ms;
+}
+.menu .delay--4 {
+  animation-delay: 800ms;
+}
 .menu li {
   background-color: #fff;
   border-radius: 15px;
@@ -335,6 +347,17 @@ header a {
   flex-direction: column;
   margin: 1rem .5rem 0 0;
   padding: .3rem;
+  animation: fondu-menu 1s ease backwards;
+}
+@keyframes fondu-menu {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .menu li h4 {
   margin: .5rem .5rem 0;
