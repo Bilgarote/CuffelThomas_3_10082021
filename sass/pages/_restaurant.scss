@@ -97,7 +97,6 @@ header {
         border-radius: 15px;
         box-shadow: 0 0 15px $color-grey;
         display: flex;
-        flex-direction: column;
         margin: 1rem .5rem 0 0;
         padding: .3rem;
         animation: fondu-menu 1s ease backwards;
@@ -115,20 +114,98 @@ header {
 
         h4 {
             margin: .5rem .5rem 0;
+            flex-basis: 100%;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
 
         p {
-            display: flex;
             font-size: .9rem;
-            justify-content: space-between;
             margin: .2rem .5rem .5rem;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
 
         span {
             font-weight: bold;
         }
+
+        div {
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: 100%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .price { 
+            align-self: end;
+            font-weight: bold;
+            margin: .2rem -2rem .5rem 0;
+        }
+        
+
+        &:hover {
+            .fa-check-circle {
+                transform-origin: right;
+                animation: slide 500ms ease both;
+
+                @keyframes slide {
+                    0% {
+                        transform: scaleX(0);
+                        opacity: 0;
+                    }
+                    100% {
+                        transform: scaleX(4rem);
+                        opacity: 1;
+                    }
+                }
+
+                &::before {                    
+                    transform: rotate(180deg);
+                    animation: rotate 0.5s both;
+
+                    @keyframes rotate {
+                        0% {
+                            transform: rotate(0);
+                        }
+                        100% {
+                            transform: rotate(360deg);
+                        }
+                      }
+                }
+            }
+
+            .price {
+                padding-right: 50px;
+                transition: all 0.5s ease;
+            }
+        }
+
+        .fa-check-circle { 
+            background: $colour-tertiary;
+            color: $colour-white;
+            white-space: nowrap;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 4rem;
+            border-radius: 0 15px 15px 0 ;
+            margin: -.3rem;
+            opacity: 0;
+            font-size: x-large;
+            padding: 1rem;
+
+            &::before {
+                white-space: nowrap;
+                overflow: hidden;
+                transform: rotate(0deg);
+            }
+        }
     }
 }
+
 
 .layout-btn {
     display: flex;
