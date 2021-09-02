@@ -1,3 +1,100 @@
+//loader
+
+.load {
+    align-items: center;
+    animation: load 1s ease 3s both;
+    animation-delay: 2s;
+    background-color: $colour-bg-loader;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+
+    &_container {
+        display: flex;
+        flex-direction: column;
+
+        &-text {
+            animation: text-focus-in 1.5s ease-in both;
+            font-family: 'Shrikhand', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+
+            @include responsive(tablet) {
+                font-size: 4rem;
+            }
+
+            @include responsive(desktop) {
+                font-size: 4rem;
+            }
+        }
+
+        &-bar {
+            animation: progress-bar 1.75s both;
+            background: linear-gradient(0deg, $colour-primary 0%, $colour-secondary 100%);
+            height: 10px;
+            opacity: .8;
+            transform-origin: left;
+            width: 100%;
+        }
+    }
+}
+
+@keyframes progress-bar{
+
+    0% {
+        transform: scaleX(0);
+    }
+
+    17% {
+        transform: scaleX(.18);
+    }
+
+    24% {
+        animation-timing-function: cubic-bezier(.9, 0, .1, 1);
+        transform: scaleX(.40);
+    }
+
+    46% {
+        animation-timing-function: cubic-bezier(.25, .25, 1);
+        transform: scaleX(.81);
+    }
+
+    98% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes load {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: -5;
+    }
+}
+
+@keyframes text-focus-in {
+    0% {
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
 // layout explorer
 
 .explorer {
