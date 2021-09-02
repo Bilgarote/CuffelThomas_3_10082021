@@ -32,18 +32,6 @@ header {
         flex-direction: row;
         justify-content: space-between;
         margin: -2rem 0;
-
-        span {
-            align-self: center;
-            flex-basis: 15%;
-
-            @include responsive(desktop) {
-                flex-basis: 0;
-                margin-right: auto;
-                padding-left: 2rem;
-            }
-        }
-
     }
 
     img {
@@ -93,19 +81,20 @@ header {
     }
 
     li {
+        animation: fondu-menu 1s ease backwards;
         background-color: $colour-white;
         border-radius: 15px;
         box-shadow: 0 0 15px $color-grey;
         display: flex;
         margin: 1rem .5rem 0 0;
         padding: .3rem;
-        animation: fondu-menu 1s ease backwards;
 
         @keyframes fondu-menu {
             from {
                 opacity: 0;
                 transform: translateY(.5rem);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -113,17 +102,17 @@ header {
         }
 
         h4 {
-            margin: .5rem .5rem 0;
             flex-basis: 100%;
-            text-overflow: ellipsis;
+            margin: .5rem .5rem 0;
             overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         p {
             font-size: .9rem;
             margin: .2rem .5rem .5rem;
-            text-overflow: ellipsis;
             overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         span {
@@ -132,44 +121,46 @@ header {
 
         div {
             display: flex;
-            flex-wrap: wrap;
             flex-basis: 100%;
-            text-overflow: ellipsis;
+            flex-wrap: wrap;
             overflow: hidden;
+            text-overflow: ellipsis;
             white-space: nowrap;
         }
 
-        .price { 
+        .price {
             align-self: end;
             font-weight: bold;
             margin: .2rem -2rem .5rem 0;
         }
-        
 
         &:hover {
+
             .fa-check-circle {
+                animation: slide 500ms ease forwards;
                 transform-origin: right;
-                animation: slide 500ms ease both;
 
                 @keyframes slide {
                     0% {
-                        transform: scaleX(0);
                         opacity: 0;
+                        transform: scaleX(0);
                     }
+
                     100% {
-                        transform: scaleX(4rem);
                         opacity: 1;
+                        transform: scaleX(4rem);
                     }
                 }
 
-                &::before {                    
+                &::before {
+                    animation: rotate 500ms both;
                     transform: rotate(180deg);
-                    animation: rotate 0.5s both;
 
                     @keyframes rotate {
                         0% {
                             transform: rotate(0);
                         }
+
                         100% {
                             transform: rotate(360deg);
                         }
@@ -179,33 +170,32 @@ header {
 
             .price {
                 padding-right: 50px;
-                transition: all 0.5s ease;
+                transition: all .5s ease;
             }
         }
 
-        .fa-check-circle { 
-            background: $colour-tertiary;
-            color: $colour-white;
-            white-space: nowrap;
-            display: flex;
-            justify-content: center;
+        .fa-check-circle {
             align-items: center;
-            width: 4rem;
-            border-radius: 0 15px 15px 0 ;
+            background: $colour-tertiary;
+            border-radius: 0 15px 15px 0;
+            color: $colour-white;
+            display: flex;
+            font-size: x-large;
+            justify-content: center;
             margin: -.3rem;
             opacity: 0;
-            font-size: x-large;
             padding: 1rem;
+            white-space: nowrap;
+            width: 4rem;
 
             &::before {
-                white-space: nowrap;
                 overflow: hidden;
                 transform: rotate(0deg);
+                white-space: nowrap;
             }
         }
     }
 }
-
 
 .layout-btn {
     display: flex;

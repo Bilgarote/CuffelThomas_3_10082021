@@ -33,16 +33,64 @@ ul li {
   padding: 1.3rem .5rem;
   width: 225px;
 }
-.btn:hover {
-  opacity: 0.9;
-  box-shadow: 0 3px 10px 0 #000000;
-}
 @media screen and (min-width: 1024px) {
   .btn {
     width: 250px;
   }
 }
+.btn:hover {
+  box-shadow: 0 3px 10px 0 #000;
+  opacity: .9;
+}
 
+.heart-layout {
+  align-self: center;
+  display: flex;
+  margin: auto;
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .heart-layout {
+    margin: 0 auto 0 0;
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .heart-layout {
+    margin: 0 auto 0 0;
+    padding: 20px;
+  }
+}
+
+span.fa-top {
+  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  background-clip: text;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 0;
+  color: transparent;
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+}
+span.far {
+  z-index: 1;
+  cursor: pointer;
+}
+span.far:hover + .fa-top {
+  animation: remplit 1s ease-out 1 forwards;
+}
+
+@keyframes remplit {
+  from {
+    background-size: 100% 0;
+    font-weight: 800;
+  }
+  to {
+    background-size: 100% 100%;
+    font-weight: 800;
+    opacity: 1;
+  }
+}
 .explorer {
   align-items: center;
   background-color: #f2f2f2;
@@ -58,6 +106,7 @@ ul li {
 .explorer__area {
   background-color: #e7e7e7e8;
   box-shadow: 5px 5px 5px -8px inset;
+  margin: 0;
   padding: .7rem 0;
   text-align: center;
   width: 100%;
@@ -232,17 +281,17 @@ ul li {
 }
 
 .new::after {
-  content: "Nouveau";
   background: #99e2d0;
-  padding: 0.4rem 0.7rem;
-  color: #278870;
-  font-weight: bold;
   border-radius: 2px;
-  width: 75px;
-  margin-top: -11.8rem;
+  color: #278870;
+  content: 'Nouveau';
+  font-weight: bold;
   margin-left: auto;
   margin-right: 15px;
+  margin-top: -11.8rem;
+  padding: .4rem .7rem;
   text-align: center;
+  width: 75px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -283,17 +332,6 @@ header a {
   flex-direction: row;
   justify-content: space-between;
   margin: -2rem 0;
-}
-.tittle__heart span {
-  align-self: center;
-  flex-basis: 15%;
-}
-@media screen and (min-width: 1024px) {
-  .tittle__heart span {
-    flex-basis: 0;
-    margin-right: auto;
-    padding-left: 2rem;
-  }
 }
 .tittle img {
   height: 17.2rem;
@@ -344,13 +382,13 @@ header a {
   animation-delay: 800ms;
 }
 .menu li {
+  animation: fondu-menu 1s ease backwards;
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 0 0 15px #9c9c9c;
   display: flex;
   margin: 1rem .5rem 0 0;
   padding: .3rem;
-  animation: fondu-menu 1s ease backwards;
 }
 @keyframes fondu-menu {
   from {
@@ -363,26 +401,26 @@ header a {
   }
 }
 .menu li h4 {
-  margin: .5rem .5rem 0;
   flex-basis: 100%;
-  text-overflow: ellipsis;
+  margin: .5rem .5rem 0;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu li p {
   font-size: .9rem;
   margin: .2rem .5rem .5rem;
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu li span {
   font-weight: bold;
 }
 .menu li div {
   display: flex;
-  flex-wrap: wrap;
   flex-basis: 100%;
-  text-overflow: ellipsis;
+  flex-wrap: wrap;
   overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }
 .menu li .price {
@@ -391,22 +429,22 @@ header a {
   margin: .2rem -2rem .5rem 0;
 }
 .menu li:hover .fa-check-circle {
+  animation: slide 500ms ease forwards;
   transform-origin: right;
-  animation: slide 500ms ease both;
 }
 @keyframes slide {
   0% {
-    transform: scaleX(0);
     opacity: 0;
+    transform: scaleX(0);
   }
   100% {
-    transform: scaleX(4rem);
     opacity: 1;
+    transform: scaleX(4rem);
   }
 }
 .menu li:hover .fa-check-circle::before {
+  animation: rotate 500ms both;
   transform: rotate(180deg);
-  animation: rotate 0.5s both;
 }
 @keyframes rotate {
   0% {
@@ -418,26 +456,26 @@ header a {
 }
 .menu li:hover .price {
   padding-right: 50px;
-  transition: all 0.5s ease;
+  transition: all .5s ease;
 }
 .menu li .fa-check-circle {
-  background: #99e2d0;
-  color: #fff;
-  white-space: nowrap;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  width: 4rem;
+  background: #99e2d0;
   border-radius: 0 15px 15px 0;
+  color: #fff;
+  display: flex;
+  font-size: x-large;
+  justify-content: center;
   margin: -.3rem;
   opacity: 0;
-  font-size: x-large;
   padding: 1rem;
+  white-space: nowrap;
+  width: 4rem;
 }
 .menu li .fa-check-circle::before {
-  white-space: nowrap;
   overflow: hidden;
   transform: rotate(0deg);
+  white-space: nowrap;
 }
 
 .layout-btn {
