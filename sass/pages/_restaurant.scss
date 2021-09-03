@@ -38,6 +38,10 @@ header {
         height: 17.2rem;
         object-fit: cover;
         width: 100%;
+
+        @include responsive(desktop) {
+            height: 30.7rem;
+        }
     }
 
     h2 {
@@ -50,6 +54,16 @@ header {
             align-self: center;
             margin-left: auto;
         }
+    }
+}
+
+.container-menu {
+    @include responsive(desktop) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: auto;
+        max-width: 1280px;
     }
 }
 
@@ -132,7 +146,7 @@ header {
         .price {
             align-self: end;
             font-weight: bold;
-            margin: .2rem -2rem .5rem 0;
+            margin: 1.5rem -2rem .5rem 0;
         }
 
         &:hover {

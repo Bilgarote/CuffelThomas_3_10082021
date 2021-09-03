@@ -62,15 +62,17 @@ ul li {
 }
 
 span.fa-top {
-  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
+  background-image: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
   background-position: bottom;
   background-repeat: no-repeat;
   color: transparent;
   font-weight: 800;
   opacity: 0;
   position: absolute;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 span.far {
   cursor: pointer;
@@ -419,6 +421,11 @@ header a {
   object-fit: cover;
   width: 100%;
 }
+@media screen and (min-width: 1024px) {
+  .tittle img {
+    height: 30.7rem;
+  }
+}
 .tittle h2 {
   font-family: 'Shrikhand', sans-serif;
   font-size: 1.7rem;
@@ -429,6 +436,16 @@ header a {
   .tittle h2 {
     align-self: center;
     margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    max-width: 1280px;
   }
 }
 
@@ -508,7 +525,7 @@ header a {
 .menu li .price {
   align-self: end;
   font-weight: bold;
-  margin: .2rem -2rem .5rem 0;
+  margin: 1.5rem -2rem .5rem 0;
 }
 .menu li:hover .fa-check-circle {
   animation: slide 500ms ease forwards;
@@ -593,6 +610,11 @@ header a {
   font-family: 'Shrikhand', sans-serif;
   font-weight: 100;
   padding: .5rem;
+}
+@media screen and (min-width: 1024px) {
+  .footer h2 {
+    text-align: center;
+  }
 }
 .footer a {
   color: #fff;
