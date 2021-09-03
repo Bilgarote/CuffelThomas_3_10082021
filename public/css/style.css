@@ -64,6 +64,7 @@ ul li {
 span.fa-top {
   background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
   background-clip: text;
+  -webkit-background-clip: text;
   background-position: bottom;
   background-repeat: no-repeat;
   color: transparent;
@@ -90,8 +91,8 @@ span.far:hover + .fa-top {
 }
 .load {
   align-items: center;
-  animation: load 1s ease 3s both;
-  animation-delay: 2s;
+  animation: load .5s ease both;
+  animation-delay: 1s;
   background-color: rgba(255, 255, 255, 0.9);
   display: flex;
   height: 100%;
@@ -105,7 +106,7 @@ span.far:hover + .fa-top {
   flex-direction: column;
 }
 .load_container-text {
-  animation: text-focus-in 1.5s ease-in both;
+  animation: text-focus-in .5s ease-in both;
   font-family: 'Shrikhand', sans-serif;
   font-size: 2rem;
   font-weight: 800;
@@ -121,7 +122,7 @@ span.far:hover + .fa-top {
   }
 }
 .load_container-bar {
-  animation: progress-bar 1.75s both;
+  animation: progress-bar 1s both;
   background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
   height: 10px;
   opacity: .8;

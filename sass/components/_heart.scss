@@ -19,6 +19,7 @@ span {
     &.fa-top {
         background: linear-gradient(0deg, $colour-primary 0%, $colour-secondary 100%);
         background-clip: text;
+        -webkit-background-clip: text;
         background-position: bottom;
         background-repeat: no-repeat;
         color: transparent;
