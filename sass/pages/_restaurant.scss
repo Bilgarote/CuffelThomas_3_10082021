@@ -32,6 +32,10 @@ header {
         flex-direction: row;
         justify-content: space-between;
         margin: -2rem 0;
+
+        @include responsive(desktop) {
+            margin: -2rem 26.7%;
+        }
     }
 
     img {
@@ -41,6 +45,9 @@ header {
 
         @include responsive(desktop) {
             height: 30.7rem;
+            display: flex;
+            align-self: center;
+            max-width: 1300px;
         }
     }
 

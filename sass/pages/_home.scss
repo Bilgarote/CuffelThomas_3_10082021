@@ -158,7 +158,8 @@
     margin: 1.5rem 1.5rem 5rem;
 
     @include responsive(desktop) {
-        flex-basis: 50%;
+        width: 50%;
+        padding: 1.5rem 1.5rem 4rem;
     }
 }
 
@@ -172,6 +173,10 @@
     padding: 0;
 
     @include responsive(tablet) {
+        align-items: center;
+    }
+
+    @include responsive(desktop) {
         align-items: center;
     }
 
@@ -192,7 +197,10 @@
 
         @include responsive(tablet) {
             width: 34%;
+        }
 
+        @include responsive(desktop) {
+            width: 50%;
         }
 
         .fas {
@@ -226,6 +234,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+        width: 50%;
     }
 
     &__info {
@@ -269,7 +278,7 @@
         }
 
         @include responsive(desktop) {
-            flex-basis: 45%;
+            flex-basis: 49%;
         }
 
         .img {

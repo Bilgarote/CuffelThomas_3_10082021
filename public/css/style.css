@@ -228,7 +228,8 @@ span.far:hover + .fa-top {
 }
 @media screen and (min-width: 1024px) {
   .steps-area {
-    flex-basis: 50%;
+    width: 50%;
+    padding: 1.5rem 1.5rem 4rem;
   }
 }
 
@@ -242,6 +243,11 @@ span.far:hover + .fa-top {
   padding: 0;
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .steps {
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1024px) {
   .steps {
     align-items: center;
   }
@@ -262,6 +268,11 @@ span.far:hover + .fa-top {
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .steps li {
     width: 34%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .steps li {
+    width: 50%;
   }
 }
 .steps li .fas {
@@ -295,6 +306,7 @@ span.far:hover + .fa-top {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 50%;
   }
 }
 .restaurant__info {
@@ -336,7 +348,7 @@ span.far:hover + .fa-top {
 }
 @media screen and (min-width: 1024px) {
   .restaurant article {
-    flex-basis: 45%;
+    flex-basis: 49%;
   }
 }
 .restaurant article .img {
@@ -416,6 +428,11 @@ header a {
   justify-content: space-between;
   margin: -2rem 0;
 }
+@media screen and (min-width: 1024px) {
+  .tittle__heart {
+    margin: -2rem 26.7%;
+  }
+}
 .tittle img {
   height: 17.2rem;
   object-fit: cover;
@@ -424,6 +441,9 @@ header a {
 @media screen and (min-width: 1024px) {
   .tittle img {
     height: 30.7rem;
+    display: flex;
+    align-self: center;
+    max-width: 1300px;
   }
 }
 .tittle h2 {
@@ -638,7 +658,8 @@ header a {
 @media screen and (min-width: 1024px) {
   .footer-container {
     margin: auto;
-    min-width: 1280px;
+    max-width: 1280px;
+    width: 75%;
   }
 }
 
