@@ -66,7 +66,7 @@ span.fa-top {
   background-position: bottom;
   background-repeat: no-repeat;
   color: transparent;
-  font-weight: 800;
+  height: 1.3rem;
   opacity: 0;
   position: absolute;
   -webkit-background-clip: text;
@@ -78,10 +78,22 @@ span.far {
   cursor: pointer;
   z-index: 1;
 }
+span.far:hover {
+  animation-direction: bottom;
+  animation: disparition 1s ease-out forwards;
+}
 span.far:hover + .fa-top {
   animation: remplit 1s ease-out 1 forwards;
 }
 
+@keyframes disparition {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 @keyframes remplit {
   from {
     background-size: 100% 0;

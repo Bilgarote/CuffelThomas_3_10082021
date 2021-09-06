@@ -18,12 +18,10 @@ span {
 
     &.fa-top {
         background-image: linear-gradient(0deg, $colour-primary 0%, $colour-secondary 100%);
-        //background-clip: text;
-        //-webkit-background-clip: text;
         background-position: bottom;
         background-repeat: no-repeat;
         color: transparent;
-        font-weight: 800;
+        height: 1.3rem;
         opacity: 0;
         position: absolute;
         -webkit-background-clip: text;
@@ -36,10 +34,27 @@ span {
         cursor: pointer;
         z-index: 1;
 
-        &:hover + .fa-top {
-            animation: remplit 1s ease-out 1 forwards;
+        &:hover {
+            animation-direction: bottom;
+            animation: disparition 1s ease-out forwards;
+
+            + .fa-top {
+                animation: remplit 1s ease-out 1 forwards;
+            }
         }
     }
+}
+
+@keyframes disparition {
+    from {
+
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+
 }
 
 @keyframes remplit {
