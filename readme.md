@@ -1,6 +1,6 @@
 #CuffelThomas_3_10082021
 
-__Réalisation du projet 2 parcours Dev Web OpenClassRooms__
+__Réalisation du projet 3 parcours Dev Web OpenClassRooms__
 
 "Dynamisez une page web avec des animations CSS"
 
