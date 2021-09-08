@@ -79,7 +79,6 @@ span.far {
   z-index: 1;
 }
 span.far:hover {
-  animation-direction: bottom;
   animation: disparition 1s ease-out forwards;
 }
 span.far:hover + .fa-top {

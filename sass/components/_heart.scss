@@ -35,8 +35,7 @@ span {
         z-index: 1;
 
         &:hover {
-            animation-direction: bottom;
-            animation: disparition 1s ease-out forwards;
+                animation: disparition 1s ease-out forwards;
 
             + .fa-top {
                 animation: remplit 1s ease-out 1 forwards;
