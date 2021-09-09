@@ -222,16 +222,39 @@ span.far:hover + .fa-top {
   width: 75%;
 }
 
-.grey {
+.color {
   color: #9c9c9c;
 }
 
-.pink {
+.steps li:hover {
+  background: #f9ecf5;
+}
+.steps li:hover .color {
   color: #9356dc;
 }
 
-.background-pink {
-  background: #f9ecf5;
+li.fa-top {
+  background-image: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  color: transparent;
+  height: 1.3rem;
+  opacity: 0;
+  position: absolute;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+li.far {
+  cursor: pointer;
+  z-index: 1;
+}
+li.far:hover {
+  animation: disparition 1s ease-out forwards;
+}
+li.far:hover + .fa-top {
+  animation: remplit 1s ease-out 1 forwards;
 }
 
 .steps-area {
